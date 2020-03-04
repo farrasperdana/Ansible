@@ -10,7 +10,7 @@
       ios_config:
         provider: "{{ cli }}"
         lines:
-          - username ca_ansi privilege 8 algorithm-type scrypt secret bukitmakmur123!@
+          - username ca_ansi privilege 8 algorithm-type scrypt secret cisco123
 
       register: print_output
 
