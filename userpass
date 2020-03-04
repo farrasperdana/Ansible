@@ -1,0 +1,17 @@
+---
+
+- name: create username HO
+  hosts: all
+  gather_facts: false
+  connection: local
+  
+  tasks:
+    - name: Global config settings
+      ios_config:
+        provider: "{{ cli }}"
+        lines:
+          - username ca_ansi privilege 8 algorithm-type scrypt secret bukitmakmur123!@
+
+      register: print_output
+
+    -  debug: var=print_output
